@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZERNO — Specialty Coffee &amp; Roastery</title>
+  <meta name="description" content="Спешелти-кофейня и микрообжарка ZERNO: моносорта с оценкой 86+ SCA, альтернативное заваривание и тёплое минималистичное пространство." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Кастомный курсор-зерно -->
+  <div class="bean-cursor" aria-hidden="true">
+    <svg class="bean-cursor__svg" viewBox="0 0 36 36" width="36" height="36" fill="none">
+      <g transform="rotate(-24 18 18)">
+        <ellipse cx="18" cy="18" rx="10.5" ry="14" fill="currentColor" />
+        <path d="M18 4.5C15.5 11 20.5 25 18 31.5" stroke="#F7F1E8" stroke-width="1.8" stroke-linecap="round" />
+      </g>
+    </svg>
+    <span class="bean-cursor__label"></span>
+  </div>
+
+  <!-- Навигация -->
+  <header class="header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a href="#hero" class="nav__logo">ZERNO</a>
+
+      <ul class="nav__links">
+        <li><a href="#about">Философия</a></li>
+        <li><a href="#menu">Карта бара</a></li>
+        <li><a href="#roasts">Зерно</a></li>
+        <li><a href="#space">Пространство</a></li>
+        <li><a href="#visit">Визит</a></li>
+      </ul>
+
+      <a href="#visit" class="btn btn--sm btn--outline magnetic" data-cursor="Запись">
+        <span class="magnetic__inner">Каппинг</span>
+      </a>
+
+      <button class="nav__burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <ul class="mobile-drawer__list">
+      <li><a href="#about">Философия</a></li>
+      <li><a href="#menu">Карта бара</a></li>
+      <li><a href="#roasts">Зерно</a></li>
+      <li><a href="#space">Пространство</a></li>
+      <li><a href="#visit">Визит</a></li>
+    </ul>
+    <a href="#visit" class="btn btn--primary mobile-drawer__cta">Записаться на каппинг</a>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero__bg-wrap" aria-hidden="true">
+        <div class="hero__bg parallax" data-speed="0.25"></div>
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__meta reveal-line">
+          <span>Specialty Coffee &amp; Micro-Roastery</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Москва · Чистые пруды</span>
+        </div>
+
+        <h1 class="hero__title" aria-label="Кофе с характером терруара">
+          <span class="kinetic-row" data-kinetic="-1">
+            <span class="kinetic-mask"><span class="kinetic-word">Кофе</span></span>
+            <span class="kinetic-mask"><span class="kinetic-word">с характером</span></span>
+          </span>
+          <span class="kinetic-row kinetic-row--italic" data-kinetic="1">
+            <span class="kinetic-mask"><span class="kinetic-word">живого</span></span>
+            <span class="kinetic-mask"><span class="kinetic-word">терруара</span></span>
+          </span>
+        </h1>
+
+        <div class="hero__bottom">
+          <p class="hero__lead reveal-fade">
+            Обжариваем микролоты каждую неделю, завариваем фильтр и эспрессо с точностью до грамма и создаём место, где хочется замедлиться.
+          </p>
+          <div class="hero__actions reveal-fade">
+            <a href="#menu" class="btn btn--primary magnetic" data-cursor="Меню">
+              <span class="magnetic__inner">Открыть меню</span>
+            </a>
+            <a href="#roasts" class="btn btn--ghost magnetic" data-cursor="Сорта">
+              <span class="magnetic__inner">Свежая обжарка</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Скролл</span>
+        <div class="hero__scroll-track">
+          <div class="hero__scroll-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О нас / Философия -->
+    <section id="about" class="section about">
+      <div class="container about__grid">
+        <div class="about__media">
+          <div class="media-frame" data-cursor="Бариста">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+              alt="Приготовление фильтр-кофе в кофейне ZERNO"
+              class="parallax-img"
+              loading="lazy"
+            />
+          </div>
+          <span class="about__caption reveal-fade">Воронка V60 · Вода 93 °C · Помол под каждый лот</span>
+        </div>
+
+        <div class="about__content">
+          <span class="eyebrow reveal-fade">01 / Философия</span>
+          <h2 class="section-title reveal-lines">
+            Чистая чашка начинается задолго до эспрессо-машины
+          </h2>
+          <p class="body-text reveal-fade">
+            Мы отбираем зелёное зерно напрямую у фермеров Эфиопии, Кении, Колумбии и Сальвадора. Светлая бережная обжарка сохраняет природную сладость, цветочную ароматику и прозрачную кислотность каждого региона.
+          </p>
+          <p class="body-text reveal-fade">
+            Никаких сиропов, маскирующих дефекты: только вода с выверенной минерализацией, свежемолотый моносорт и спокойный ритм утра.
+          </p>
+
+          <div class="stats reveal-fade">
+            <div class="stat">
+              <div class="stat__value"><span class="counter" data-target="87">0</span>+</div>
+              <div class="stat__label">баллов SCA у лотов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value"><span class="counter" data-target="14">0</span></div>
+              <div class="stat__label">сортов в ротации</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value"><span class="counter" data-target="48">0</span> ч</div>
+              <div class="stat__label">от ростера до бара</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="section menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal-fade">02 / Карта бара</span>
+            <h2 class="section-title reveal-lines">Напитки дня</h2>
+          </div>
+          <p class="section-head__note reveal-fade">
+            Готовим на овсяном, миндальном или фермерском цельном молоке без доплаты.
+          </p>
+        </div>
+
+        <div class="menu__grid">
+          <article class="card drink-card reveal-card" data-cursor="180 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">01</span>
+              <span class="drink-card__tag">Классика</span>
+            </div>
+            <h3 class="drink-card__title">Двойной эспрессо</h3>
+            <p class="drink-card__desc">
+              Плотная текстура, тёмный какао, запечённый фундук и карамельное послевкусие.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">40 мл</span>
+              <span class="drink-card__price">180 ₽</span>
+            </div>
+          </article>
+
+          <article class="card drink-card reveal-card" data-cursor="320 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">02</span>
+              <span class="drink-card__tag">Альтернатива</span>
+            </div>
+            <h3 class="drink-card__title">Воронка V60</h3>
+            <p class="drink-card__desc">
+              Чистая и шелковистая чашка с нотами жасмина, белого персика и бергамота.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">250 мл</span>
+              <span class="drink-card__price">320 ₽</span>
+            </div>
+          </article>
+
+          <article class="card drink-card reveal-card" data-cursor="290 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">03</span>
+              <span class="drink-card__tag">Молочный</span>
+            </div>
+            <h3 class="drink-card__title">Флэт уайт</h3>
+            <p class="drink-card__desc">
+              Двойная порция эспрессо и глянцевая микропена для яркого кофейного баланса.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">200 мл</span>
+              <span class="drink-card__price">290 ₽</span>
+            </div>
+          </article>
+
+          <article class="card drink-card reveal-card" data-cursor="340 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">04</span>
+              <span class="drink-card__tag">Чай и молоко</span>
+            </div>
+            <h3 class="drink-card__title">Матча латте</h3>
+            <p class="drink-card__desc">
+              Церемониальный сорт Удзи на овсяном молоке — мягкая умами-сладость и свежесть.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">250 мл</span>
+              <span class="drink-card__price">340 ₽</span>
+            </div>
+          </article>
+
+          <article class="card drink-card reveal-card" data-cursor="310 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">05</span>
+              <span class="drink-card__tag">Холодный</span>
+            </div>
+            <h3 class="drink-card__title">Колд брю</h3>
+            <p class="drink-card__desc">
+              Медленная холодная экстракция 18 часов: спелая вишня, какао-бобы и мягкость.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">250 мл</span>
+              <span class="drink-card__price">310 ₽</span>
+            </div>
+          </article>
+
+          <article class="card drink-card reveal-card" data-cursor="350 ₽">
+            <div class="drink-card__top">
+              <span class="drink-card__num">06</span>
+              <span class="drink-card__tag">Сезонный</span>
+            </div>
+            <h3 class="drink-card__title">Эспрессо-тоник</h3>
+            <p class="drink-card__desc">
+              Яркая кислотность кенийского лота на крафтовом тонике с цедрой грейпфрута.
+            </p>
+            <div class="drink-card__footer">
+              <span class="drink-card__vol">280 мл</span>
+              <span class="drink-card__price">350 ₽</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Свежая обжарка -->
+    <section id="roasts" class="section roasts">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal-fade">03 / Зерно с собой</span>
+            <h2 class="section-title reveal-lines">Свежие микролоты</h2>
+          </div>
+          <p class="section-head__note reveal-fade">
+            Мелем под турку, воронку, аэропресс или эспрессо прямо перед выдачей.
+          </p>
+        </div>
+
+        <div class="roasts__grid">
+          <article class="card roast-card reveal-card" data-cursor="250 г">
+            <div class="roast-card__origin">Эфиопия · Иргачефф</div>
+            <h3 class="roast-card__name">Worka Sakaro</h3>
+            <p class="roast-card__notes">Жасмин, белый персик, лайм</p>
+            <div class="roast-card__meta">
+              <span>Мытая обработка</span>
+              <span>88.5 SCA</span>
+            </div>
+            <div class="roast-card__bottom">
+              <span class="roast-card__weight">250 г · Фильтр</span>
+              <span class="roast-card__price">950 ₽</span>
+            </div>
+          </article>
+
+          <article class="card roast-card reveal-card" data-cursor="250 г">
+            <div class="roast-card__origin">Колумбия · Уила</div>
+            <h3 class="roast-card__name">Finca El Paraiso</h3>
+            <p class="roast-card__notes">Маракуйя, малина, молочный шоколад</p>
+            <div class="roast-card__meta">
+              <span>Анаэробная</span>
+              <span>89.0 SCA</span>
+            </div>
+            <div class="roast-card__bottom">
+              <span class="roast-card__weight">250 г · Фильтр</span>
+              <span class="roast-card__price">1 150 ₽</span>
+            </div>
+          </article>
+
+          <article class="card roast-card reveal-card" data-cursor="250 г">
+            <div class="roast-card__origin">Бразилия · Можиана</div>
+            <h3 class="roast-card__name">Fazenda Passeio</h3>
+            <p class="roast-card__notes">Жареный миндаль, ирис, какао</p>
+            <div class="roast-card__meta">
+              <span>Натуральная</span>
+              <span>85.5 SCA</span>
+            </div>
+            <div class="roast-card__bottom">
+              <span class="roast-card__weight">250 г · Эспрессо</span>
+              <span class="roast-card__price">790 ₽</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Атмосфера / Пространство -->
+    <section id="space" class="section space">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal-fade">04 / Пространство</span>
+            <h2 class="section-title reveal-lines">Тёплый свет, дуб и аромат обжарки</h2>
+          </div>
+          <p class="section-head__note reveal-fade">
+            Открытая барная стойка, живые растения и тихий зал для работы или неспешной беседы.
+          </p>
+        </div>
+
+        <div class="space__gallery">
+          <figure class="space__item space__item--tall" data-cursor="Зал">
+            <img
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+              alt="Минималистичный интерьер кофейни с тёплым деревом"
+              class="parallax-img"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="space__item" data-cursor="Латте-арт">
+            <img
+              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
+              alt="Латте-арт в керамической чашке"
+              class="parallax-img"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="space__item" data-cursor="Обжарка">
+            <img
+              src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=800&q=80"
+              alt="Свежеобжаренные кофейные зёрна"
+              class="parallax-img"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Визит и каппинг -->
+    <section id="visit" class="section visit">
+      <div class="container visit__grid">
+        <div class="visit__info">
+          <span class="eyebrow reveal-fade">05 / Ждём вас</span>
+          <h2 class="section-title reveal-lines">Загляните на чашку или субботний каппинг</h2>
+
+          <dl class="visit__details reveal-fade">
+            <div>
+              <dt>Адрес</dt>
+              <dd>Покровский бульвар, 14/6, Москва</dd>
+            </div>
+            <div>
+              <dt>Часы работы</dt>
+              <dd>Пн–Пт 08:00–21:00 · Сб–Вс 09:00–22:00</dd>
+            </div>
+            <div>
+              <dt>Телефон</dt>
+              <dd><a href="tel:+74951234567">+7 (495) 123-45-67</a></dd>
+            </div>
+            <div>
+              <dt>Почта</dt>
+              <dd><a href="mailto:hello@zerno.coffee">hello@zerno.coffee</a></dd>
+            </div>
+          </dl>
+        </div>
+
+        <form class="visit__form card reveal-card" id="cuppingForm">
+          <h3 class="visit__form-title">Запись на дегустацию</h3>
+          <p class="visit__form-sub">Каждую субботу в 12:00 пробуем 5 новых лотов недели.</p>
+
+          <label class="field">
+            <span>Имя</span>
+            <input type="text" name="name" placeholder="Анна" required />
+          </label>
+          <label class="field">
+            <span>Email или Telegram</span>
+            <input type="text" name="contact" placeholder="@anna_coffee" required />
+          </label>
+          <label class="field">
+            <span>Комментарий</span>
+            <textarea name="note" rows="3" placeholder="Количество гостей или пожелания"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary magnetic" data-cursor="Отправить">
+            <span class="magnetic__inner">Забронировать место</span>
+          </button>
+          <p class="visit__form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__logo">ZERNO</a>
+      <p class="footer__copy">&copy; 2026 ZERNO Specialty Coffee. Обжарено с вниманием к деталям.</p>
+      <div class="footer__links">
+        <a href="#" aria-label="Telegram">Telegram</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger + ScrollToPlugin + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
