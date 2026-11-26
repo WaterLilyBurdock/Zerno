@@ -14,6 +14,9 @@
 </head>
 <body>
 
+  <!-- Индикатор прогресса скролла -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <!-- Кастомный курсор-зерно -->
   <div class="bean-cursor" aria-hidden="true">
     <svg class="bean-cursor__svg" viewBox="0 0 36 36" width="36" height="36" fill="none">
@@ -110,13 +113,27 @@
       </div>
     </section>
 
+    <!-- Бегущая строка сортов -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Эфиопия Worka Sakaro · 88.5 SCA</span>
+        <span>Колумбия Finca El Paraiso · 89.0 SCA</span>
+        <span>Бразилия Fazenda Passeio · 85.5 SCA</span>
+        <span>Свежая обжарка каждую среду</span>
+        <span>Эфиопия Worka Sakaro · 88.5 SCA</span>
+        <span>Колумбия Finca El Paraiso · 89.0 SCA</span>
+        <span>Бразилия Fazenda Passeio · 85.5 SCA</span>
+        <span>Свежая обжарка каждую среду</span>
+      </div>
+    </div>
+
     <!-- О нас / Философия -->
     <section id="about" class="section about">
       <div class="container about__grid">
         <div class="about__media">
           <div class="media-frame" data-cursor="Бариста">
             <img
-              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+              src="images/about-barista.jpg"
               alt="Приготовление фильтр-кофе в кофейне ZERNO"
               class="parallax-img"
               loading="lazy"
@@ -168,8 +185,15 @@
           </p>
         </div>
 
+        <div class="menu__filters reveal-fade" role="tablist" aria-label="Фильтр напитков">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">Все</button>
+          <button type="button" class="filter-btn" data-filter="classic" aria-pressed="false">Классика</button>
+          <button type="button" class="filter-btn" data-filter="alt" aria-pressed="false">Альтернатива</button>
+          <button type="button" class="filter-btn" data-filter="cold" aria-pressed="false">Холодные</button>
+        </div>
+
         <div class="menu__grid">
-          <article class="card drink-card reveal-card" data-cursor="180 ₽">
+          <article class="card drink-card reveal-card" data-category="classic" data-item="espresso" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">01</span>
               <span class="drink-card__tag">Классика</span>
@@ -182,9 +206,10 @@
               <span class="drink-card__vol">40 мл</span>
               <span class="drink-card__price">180 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card drink-card reveal-card" data-cursor="320 ₽">
+          <article class="card drink-card reveal-card" data-category="alt" data-item="v60" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">02</span>
               <span class="drink-card__tag">Альтернатива</span>
@@ -197,9 +222,10 @@
               <span class="drink-card__vol">250 мл</span>
               <span class="drink-card__price">320 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card drink-card reveal-card" data-cursor="290 ₽">
+          <article class="card drink-card reveal-card" data-category="classic" data-item="flatwhite" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">03</span>
               <span class="drink-card__tag">Молочный</span>
@@ -212,9 +238,10 @@
               <span class="drink-card__vol">200 мл</span>
               <span class="drink-card__price">290 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card drink-card reveal-card" data-cursor="340 ₽">
+          <article class="card drink-card reveal-card" data-category="alt" data-item="matcha" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">04</span>
               <span class="drink-card__tag">Чай и молоко</span>
@@ -227,9 +254,10 @@
               <span class="drink-card__vol">250 мл</span>
               <span class="drink-card__price">340 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card drink-card reveal-card" data-cursor="310 ₽">
+          <article class="card drink-card reveal-card" data-category="cold" data-item="coldbrew" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">05</span>
               <span class="drink-card__tag">Холодный</span>
@@ -242,9 +270,10 @@
               <span class="drink-card__vol">250 мл</span>
               <span class="drink-card__price">310 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card drink-card reveal-card" data-cursor="350 ₽">
+          <article class="card drink-card reveal-card" data-category="cold" data-item="tonic" data-cursor="Открыть" tabindex="0" role="button">
             <div class="drink-card__top">
               <span class="drink-card__num">06</span>
               <span class="drink-card__tag">Сезонный</span>
@@ -257,6 +286,7 @@
               <span class="drink-card__vol">280 мл</span>
               <span class="drink-card__price">350 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
         </div>
       </div>
@@ -276,7 +306,7 @@
         </div>
 
         <div class="roasts__grid">
-          <article class="card roast-card reveal-card" data-cursor="250 г">
+          <article class="card roast-card reveal-card" data-item="worka" data-cursor="Открыть" tabindex="0" role="button">
             <div class="roast-card__origin">Эфиопия · Иргачефф</div>
             <h3 class="roast-card__name">Worka Sakaro</h3>
             <p class="roast-card__notes">Жасмин, белый персик, лайм</p>
@@ -288,9 +318,10 @@
               <span class="roast-card__weight">250 г · Фильтр</span>
               <span class="roast-card__price">950 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card roast-card reveal-card" data-cursor="250 г">
+          <article class="card roast-card reveal-card" data-item="paraiso" data-cursor="Открыть" tabindex="0" role="button">
             <div class="roast-card__origin">Колумбия · Уила</div>
             <h3 class="roast-card__name">Finca El Paraiso</h3>
             <p class="roast-card__notes">Маракуйя, малина, молочный шоколад</p>
@@ -302,9 +333,10 @@
               <span class="roast-card__weight">250 г · Фильтр</span>
               <span class="roast-card__price">1 150 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
 
-          <article class="card roast-card reveal-card" data-cursor="250 г">
+          <article class="card roast-card reveal-card" data-item="passeio" data-cursor="Открыть" tabindex="0" role="button">
             <div class="roast-card__origin">Бразилия · Можиана</div>
             <h3 class="roast-card__name">Fazenda Passeio</h3>
             <p class="roast-card__notes">Жареный миндаль, ирис, какао</p>
@@ -316,6 +348,7 @@
               <span class="roast-card__weight">250 г · Эспрессо</span>
               <span class="roast-card__price">790 ₽</span>
             </div>
+            <span class="card__more">Подробнее →</span>
           </article>
         </div>
       </div>
@@ -337,7 +370,7 @@
         <div class="space__gallery">
           <figure class="space__item space__item--tall" data-cursor="Зал">
             <img
-              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80"
+              src="images/space-interior.jpg"
               alt="Минималистичный интерьер кофейни с тёплым деревом"
               class="parallax-img"
               loading="lazy"
@@ -345,7 +378,7 @@
           </figure>
           <figure class="space__item" data-cursor="Латте-арт">
             <img
-              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80"
+              src="images/space-latte.jpg"
               alt="Латте-арт в керамической чашке"
               class="parallax-img"
               loading="lazy"
@@ -353,7 +386,7 @@
           </figure>
           <figure class="space__item" data-cursor="Обжарка">
             <img
-              src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=800&q=80"
+              src="images/space-roast.jpg"
               alt="Свежеобжаренные кофейные зёрна"
               class="parallax-img"
               loading="lazy"
@@ -415,6 +448,63 @@
       </div>
     </section>
   </main>
+
+  <!-- Модальное окно карточки -->
+  <div class="coffee-modal" id="coffeeModal" role="dialog" aria-modal="true" aria-labelledby="coffeeModalTitle" aria-hidden="true">
+    <div class="coffee-modal__backdrop" data-close-coffee-modal></div>
+    <div class="coffee-modal__dialog">
+      <button type="button" class="coffee-modal__close" data-close-coffee-modal aria-label="Закрыть">&times;</button>
+
+      <div class="coffee-modal__head">
+        <span class="coffee-modal__tag" id="coffeeModalTag"></span>
+        <span class="coffee-modal__vol" id="coffeeModalVol"></span>
+      </div>
+
+      <h3 class="coffee-modal__title" id="coffeeModalTitle"></h3>
+      <div class="coffee-modal__price" id="coffeeModalPrice"></div>
+      <p class="coffee-modal__story" id="coffeeModalStory"></p>
+
+      <div class="coffee-modal__bars">
+        <div class="flavor-row">
+          <span>Сладость</span>
+          <div class="flavor-track"><span class="flavor-fill" id="barSweet"></span></div>
+        </div>
+        <div class="flavor-row">
+          <span>Кислотность</span>
+          <div class="flavor-track"><span class="flavor-fill" id="barAcid"></span></div>
+        </div>
+        <div class="flavor-row">
+          <span>Плотность</span>
+          <div class="flavor-track"><span class="flavor-fill" id="barBody"></span></div>
+        </div>
+      </div>
+
+      <div class="coffee-modal__recipe">
+        <span class="coffee-modal__label">Параметры заваривания</span>
+        <p id="coffeeModalRecipe"></p>
+      </div>
+
+      <div class="coffee-modal__grind" id="coffeeModalGrindBlock">
+        <span class="coffee-modal__label">Помол для пачки</span>
+        <div class="grind-pills" role="group" aria-label="Выбор помола">
+          <button type="button" class="grind-pill is-active" data-grind="В зёрнах">В зёрнах</button>
+          <button type="button" class="grind-pill" data-grind="Воронка V60">Воронка V60</button>
+          <button type="button" class="grind-pill" data-grind="Эспрессо">Эспрессо</button>
+          <button type="button" class="grind-pill" data-grind="Турка">Турка</button>
+        </div>
+      </div>
+
+      <div class="coffee-modal__actions">
+        <a href="#visit" class="btn btn--primary magnetic" id="coffeeModalCta" data-cursor="Запись">
+          <span class="magnetic__inner">Заказать / На каппинг</span>
+        </a>
+        <div class="coffee-modal__nav">
+          <button type="button" class="coffee-modal__arrow" id="coffeeModalPrev" aria-label="Предыдущая позиция">←</button>
+          <button type="button" class="coffee-modal__arrow" id="coffeeModalNext" aria-label="Следующая позиция">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Футер -->
   <footer class="footer">
